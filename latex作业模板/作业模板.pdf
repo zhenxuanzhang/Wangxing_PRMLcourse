@@ -1,0 +1,151 @@
+\documentclass[11.5pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{natbib}
+\addtolength{\textwidth}{1in}
+\usepackage{mathrsfs}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-0.6in}
+\renewcommand{\baselinestretch}{1.1}
+\usepackage{graphicx}
+\usepackage{color}
+%\newcommand{\qed}{{\unskip\nobreak\hfil\penalty50\hskip2em\vadjust{}
+%            \nobreak\hfil$\Box$\parfillskip=0pt\finalhyphendemerits=0\par}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newtheorem{thm}{Theorem}[section] %(If you want theorem numbered
+\newtheorem{lemma}{Lemma}[section] %%    with section number.
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newcommand{\bed}{\begin{definition}}
+\newcommand{\eed}{\end{definition}}
+\renewcommand{\b}{\mathbf b}
+\newtheorem{theorem}{Theorem}
+\newcommand{\lam}{\mu}
+\newcommand{\barphi}{\bar{\varphi}}
+\newcommand{\lamhat}{\hat{\mu}}
+\newcommand{\lambar}{\bar{\mu}}
+\newcommand{\lamhqn}{\hat{\mu}_{q,n}}
+\newcommand{\lamtqn}{\tilde{\mu}_{q,n}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\upsilonhat}{\hat{\upsilonilon}}
+\newcommand{\rarr}{\rightarrow}
+\newcommand{\bitem}{\begin{itemize}}
+\newcommand{\eitem}{\end{itemize}}
+\newcommand{\bara}{\bar{a}}
+\newcommand{\goto}{\rightarrow}
+\newcommand{\poiss}{\mathrm{Poisson}}
+\newcommand{\mexp}{\mathrm{exp}}
+\newcommand{\margmax}{\mathrm{argmax}}
+\newcommand{\margmin}{\mathrm{argmin}}
+\newcommand{\mmax}{\mathrm{max}}
+\newcommand{\mmin}{\mathrm{min}}
+\newcommand{\msup}{\mathrm{sup}}
+\newcommand{\sR}{{\cal R}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\ttR}{{\tilde{R}}}
+\newcommand{\minf}{\mathrm{inf}}
+\newcommand{\fe}{\bar{E}*F}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\balign}{\begin{align}}
+\newcommand{\ealign}{\end{align}}
+\newcommand{\barF}{\bar{F}}
+\newcommand{\barG}{\bar{G}}
+\newcommand{\barE}{\bar{E}}
+\newcommand{\tR}{\tilde{\sR}}
+\newcommand{\tB}{\tilde{B}^2}
+\newcommand{\tV}{\tilde{V}}
+\newcommand{\tT}{\tilde{t}}
+\newcommand{\barrho}{\bar{\eta}}
+\newcommand{\EP}{{\cal E}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\Bayes}{\eta}
+\newcommand{\tv}{\tilde{v}}
+\newcommand{\BMMn}{\bar{R}_n^*}
+\newcommand{\hatt}{\hat{T}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\barmu}{\bar{\mu}}
+\newcommand{\barA}{\Psi^{**}}
+\newcommand{\barh}{\bar{h}}
+\newcommand{\AB}{\Psi^*}
+\newcommand{\barcG}{\bar{{\cal G}}}
+\newcommand{\barcF}{\bar{{\cal F}}}
+\newcommand{\so}{\sigma_0}
+\newcommand{\uo}{\mu_0}
+\newcommand{\s}{\sigma}
+\newcommand{\shat}{\hat{\sigma}}
+\newcommand{\uhat}{\hat{\mu}}
+\newcommand{\tF}{\tilde{F}}
+\newcommand{\that}{\hat{t}}
+\newcommand{\bphi}{\bar{\varphi}}
+\newcommand{\OD}{\mathrm{OD}}
+\newcommand{\bF}{\bar{F}}
+\newcommand{\detm}{\mathrm{det}}
+\newcommand{\tr}{\mathrm{tr}}
+\usepackage{amssymb}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\hSigma}{\hat{\Sigma}}
+\newcommand{\hLambda}{\hat{\Lambda}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\hlam}{\hat{\lambda}}
+\newcommand{\hQ}{\hat{Q}}
+\newcommand{\jin}[1]{{\textcolor{red}{[jin: #1]}}}
+\newcommand{\red}[1]{{\textcolor{red}{[#1]}}}
+\newcommand{\luo}[1]{{\textcolor{blue}{[#1]}}}
+\newcommand{\ke}[1]{{\textcolor{red}{[#1]}}}
+\newtheorem*{remark}{Remark}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+%%%%%begin{document}
+%%%%%%%%%%%%%%%%
+\title{Note about the video about Christopher Bishop's Model-Based machine learning}
+\author{Zhenxuan Zhang}
+\date{\today} 
+%%%%%%%%%%%%%%%%
+%%%%%begin{document}
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%
+\maketitle
+\subsection{Problem 1}
+
+  In Cristopher's video,universal machine learning refers to... 
+
+
+\subsection{Problem 2}
+   Assume PCA is ..., for model it is what, for algorithm we refer to
+
+
+\subsection{Problem 3}
+   Bayes framework in Christopher's book, it means... 
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+\subsection{Open questions}
+
+\subsection{Reference}
+
+\end{document}
+
+
+
+
+
+
+
+
+
