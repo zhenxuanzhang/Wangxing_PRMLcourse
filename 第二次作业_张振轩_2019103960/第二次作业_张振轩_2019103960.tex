@@ -1,0 +1,179 @@
+\documentclass[11.5pt]{article}
+%[11.5pt]为设置字体大小为11.5磅
+
+\usepackage{ctex} 
+%显示中文
+\usepackage{amsmath} 
+%目的是为改善信息结构，并且改善打印输出包含数学公式的文档
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{extarrows}
+
+\usepackage{amsthm}
+%这个package是定理环境专用的
+\usepackage{natbib}
+%自带参考文献宏包
+\usepackage{mathrsfs}
+%用于产生一种数学用的花体字
+\usepackage{amssymb}
+%宏包套件AMSFonts中的一个宏包，调用该宏包时，AMSFonts也被调用，定义了msam和mabm中的全部数学符号命令
+\usepackage{graphicx}
+\usepackage{color}
+
+\addtolength{\textwidth}{1in}
+%改变长度的命令是 \addtolength 和 \setlength。latex可认的是 cm, mm, in 和 pt. 变量可设为负数。
+%\textwidth: 文本的宽度
+%in 英寸(1in=2.54cm)
+%pt 点(1in=72.27pt)
+%bp 大点(1in= 72bp)
+%\columnsep: 列间距
+%\topmargin: 页眉到页边的距离
+%\topskip: 页眉与正文的距离
+%\textheight: 正文的高度
+%\textwidth: 文本的宽度
+%\oddsidemargin: 奇数页的左面页边距
+%\evensidemargin : 偶数页的左面页边距
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-0.6in}
+
+
+\renewcommand{\baselinestretch}{1.1}
+%\newcommand defines a new command, and makes an error if it is already defined.
+%\renewcommand redefines a predefined command, and makes an error if it is not yet defined.
+%\providecommand defines a new command if it isn't already defined,  or does nothing if it exists.
+
+%\newcommand{\qed}{{\unskip\nobreak\hfil\penalty50\hskip2em\vadjust{}
+%            \nobreak\hfil$\Box$\parfillskip=0pt\finalhyphendemerits=0\par}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\newtheorem{thm}{Theorem}[section] %(If you want theorem numbered使用下面语句来定于定理名字和输出显示。
+%\newtheorem{name名字}{Printed output输出显示}
+\newtheorem{lemma}{Lemma}[section] %%    with section number.
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem*{remark}{Remark}%带序号的定理
+
+
+
+
+\usepackage{hyperref}
+%在LaTeX(及一系列)中添加带超链接的交叉引用(超链接)
+\hypersetup{
+    colorlinks=true,%彩色链接
+    linkcolor=blue,%内部链接颜色
+    filecolor=magenta,%文件链接颜色
+    urlcolor=cyan,%网页与电子邮件链接颜色
+}
+
+
+
+\title{Assignment \uppercase\expandafter{\romannumeral2}}
+\author{Zhenxuan Zhang}
+\CTEXoptions[today=old]
+
+\begin{document}
+
+\maketitle
+\section{Problem 1.3}
+	设取到一个苹果的概率为P(A)，则有：
+\begin{align*}
+P(A) &= P(r)\cdot P(A|r) + P(b)\cdot P(A|b) +P(g)\cdot P(A|g)  \\
+&= \begin{multlined}[t]
+0.2\times \frac{3}{10} + 0.2\times \frac12 +0.6\times \frac{3}{10}
+\end{multlined}\\
+&= \begin{multlined}[t]
+0.06+0.1+0.18
+\end{multlined}\\
+&= 0.34
+\end{align*}
+
+	设取到一个橘子的概率为P(B)，则有：
+\begin{align*}
+P(B) &= P(r)\cdot P(B|r) + P(b)\cdot P(B|b) +P(g)\cdot P(B|g)  \\
+&= \begin{multlined}[t]
+0.2\times \frac{4}{10} + 0.2\times \frac12 +0.6\times \frac{3}{10}
+\end{multlined}\\
+&= 0.36
+\end{align*}
+
+由贝叶斯公式：
+\begin{align*}
+P(g|B) &= \frac{P(B|g)\cdot P(g)}{P(B)}  \\
+&= \begin{multlined}[t]
+\frac{0.6\times \frac{3}{10}}{0.36} 
+\end{multlined}\\
+&= 0.5
+\end{align*}
+
+\section{Problem 1.6}
+ 因为$x,y$相互独立，所以有：
+ \[
+ p(x,y) = p_x(x)\cdot p_y(y)
+ \]
+
+\begin{align*}
+\implies
+\iint xyp(x,y) \,\mathrm{d}x \mathrm{d}y &= 
+\iint xyp_x(x)\cdot p_y(y) \,\mathrm{d}x \mathrm{d}y \\
+&= \begin{multlined}[t]
+\left( \int xp_x(x) \,\mathrm{d}x \right) \left(\int yp_y(y) \,\mathrm{d}y \right)
+\end{multlined}\\
+\implies
+E_{x,y}(xy) &= E(x)\cdot E(y) \\
+\implies
+cov(x,y) &= E_{x,y}(xy) - E(x)\cdot E(y) = 0
+\end{align*}
+
+\section{Problem 1.8}
+  
+\begin{equation*}
+\begin{split}
+E(x) &= \int_{-\infty}^{+\infty} x\frac1{ \sqrt{2\pi\sigma^2}} 
+exp \left\{ -\frac{1}{2\sigma^2} (x-\mu)^2 \right\} \,\mathrm{d}x \\
+&\xlongequal{\text{令}\frac{x-\mu}{\sqrt{2\sigma^2}} = t }
+\frac{\sqrt{2}\sigma}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{+\infty} (\sqrt{2}\sigma t + \mu) exp\{-t^2\} \,\mathrm{d}t \\
+&= \frac1{\sqrt\pi}\sqrt{\pi}\mu \\
+&=\mu
+\end{split}
+\end{equation*}
+
+
+\begin{equation*}
+\begin{split}
+var(x) &= \int_{-\infty}^{+\infty} \left(x-E(x)\right)\frac1{ \sqrt{2\pi\sigma^2}} 
+exp \left\{ -\frac{1}{2\sigma^2} (x-\mu)^2 \right\} \,\mathrm{d}x \\
+&\xlongequal{\text{令}\frac{x-\mu}{\sqrt{2\sigma^2}} = t }
+\frac{4\sigma^2}{\sqrt{\pi}} \int_{0}^{+\infty} 
+t^2 \mathrm{e}^{-t^2} \,\mathrm{d}t \\
+&\xlongequal{\text{令}t^2= u} \frac{2\sigma^2}{\sqrt{\pi}} \int_0^{+\infty} u^{\frac12} \mathrm{e}
+^{-u} \,\mathrm{d}u \\
+&=\frac{2\sigma^2}{\sqrt{\pi}} \Gamma(\frac32) \\
+&= \sigma^2
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+	\implies
+	E(x^2) &= var(x) + [E(x)]^2\\
+	&=\mu^2 + \sigma^2
+	\end{split}
+\end{equation*}
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
