@@ -1,0 +1,182 @@
+\documentclass[11.5pt]{article}
+%[11.5pt]为设置字体大小为11.5磅
+\usepackage{ctex}
+\usepackage{amsmath} 
+%目的是为改善信息结构，并且改善打印输出包含数学公式的文档
+\usepackage{amsthm}
+%这个package是定理环境专用的
+\usepackage{natbib}
+%自带参考文献宏包
+\usepackage{mathrsfs}
+%用于产生一种数学用的花体字
+\usepackage{amssymb}
+%宏包套件AMSFonts中的一个宏包，调用该宏包时，AMSFonts也被调用，定义了msam和mabm中的全部数学符号命令
+\usepackage{graphicx}
+\usepackage{color}
+
+\addtolength{\textwidth}{1in}
+%改变长度的命令是 \addtolength 和 \setlength。latex可认的是 cm, mm, in 和 pt. 变量可设为负数。
+%\textwidth: 文本的宽度
+%in 英寸(1in=2.54cm)
+%pt 点(1in=72.27pt)
+%bp 大点(1in= 72bp)
+%\columnsep: 列间距
+%\topmargin: 页眉到页边的距离
+%\topskip: 页眉与正文的距离
+%\textheight: 正文的高度
+%\textwidth: 文本的宽度
+%\oddsidemargin: 奇数页的左面页边距
+%\evensidemargin : 偶数页的左面页边距
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-0.6in}
+
+
+\renewcommand{\baselinestretch}{1.1}
+%\newcommand defines a new command, and makes an error if it is already defined.
+%\renewcommand redefines a predefined command, and makes an error if it is not yet defined.
+%\providecommand defines a new command if it isn't already defined,  or does nothing if it exists.
+
+%\newcommand{\qed}{{\unskip\nobreak\hfil\penalty50\hskip2em\vadjust{}
+%            \nobreak\hfil$\Box$\parfillskip=0pt\finalhyphendemerits=0\par}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\newtheorem{thm}{Theorem}[section] %(If you want theorem numbered使用下面语句来定于定理名字和输出显示。
+%\newtheorem{name名字}{Printed output输出显示}
+\newtheorem{lemma}{Lemma}[section] %%    with section number.
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem*{remark}{Remark}%带序号的定理
+
+%自定义一个新命令
+\newcommand{\bed}{\begin{definition}}
+\newcommand{\eed}{\end{definition}}
+\renewcommand{\b}{\mathbf b}
+\newtheorem{theorem}{Theorem}
+\newcommand{\lam}{\mu}
+\newcommand{\barphi}{\bar{\varphi}}
+\newcommand{\lamhat}{\hat{\mu}}
+\newcommand{\lambar}{\bar{\mu}}
+\newcommand{\lamhqn}{\hat{\mu}_{q,n}}
+\newcommand{\lamtqn}{\tilde{\mu}_{q,n}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\upsilonhat}{\hat{\upsilonilon}}
+\newcommand{\rarr}{\rightarrow}
+\newcommand{\bitem}{\begin{itemize}}
+\newcommand{\eitem}{\end{itemize}}
+\newcommand{\bara}{\bar{a}}
+\newcommand{\goto}{\rightarrow}
+\newcommand{\poiss}{\mathrm{Poisson}}
+\newcommand{\mexp}{\mathrm{exp}}
+\newcommand{\margmax}{\mathrm{argmax}}
+\newcommand{\margmin}{\mathrm{argmin}}
+\newcommand{\mmax}{\mathrm{max}}
+\newcommand{\mmin}{\mathrm{min}}
+\newcommand{\msup}{\mathrm{sup}}
+\newcommand{\sR}{{\cal R}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\ttR}{{\tilde{R}}}
+\newcommand{\minf}{\mathrm{inf}}
+\newcommand{\fe}{\bar{E}*F}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\balign}{\begin{align}}
+\newcommand{\ealign}{\end{align}}
+\newcommand{\barF}{\bar{F}}
+\newcommand{\barG}{\bar{G}}
+\newcommand{\barE}{\bar{E}}
+\newcommand{\tR}{\tilde{\sR}}
+\newcommand{\tB}{\tilde{B}^2}
+\newcommand{\tV}{\tilde{V}}
+\newcommand{\tT}{\tilde{t}}
+\newcommand{\barrho}{\bar{\eta}}
+\newcommand{\EP}{{\cal E}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\Bayes}{\eta}
+\newcommand{\tv}{\tilde{v}}
+\newcommand{\BMMn}{\bar{R}_n^*}
+\newcommand{\hatt}{\hat{T}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\barmu}{\bar{\mu}}
+\newcommand{\barA}{\Psi^{**}}
+\newcommand{\barh}{\bar{h}}
+\newcommand{\AB}{\Psi^*}
+\newcommand{\barcG}{\bar{{\cal G}}}
+\newcommand{\barcF}{\bar{{\cal F}}}
+\newcommand{\so}{\sigma_0}
+\newcommand{\uo}{\mu_0}
+\newcommand{\s}{\sigma}
+\newcommand{\shat}{\hat{\sigma}}
+\newcommand{\uhat}{\hat{\mu}}
+\newcommand{\tF}{\tilde{F}}
+\newcommand{\that}{\hat{t}}
+\newcommand{\bphi}{\bar{\varphi}}
+\newcommand{\OD}{\mathrm{OD}}
+\newcommand{\bF}{\bar{F}}
+\newcommand{\detm}{\mathrm{det}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\hSigma}{\hat{\Sigma}}
+\newcommand{\hLambda}{\hat{\Lambda}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\hlam}{\hat{\lambda}}
+\newcommand{\hQ}{\hat{Q}}
+\newcommand{\jin}[1]{{\textcolor{red}{[jin: #1]}}}
+\newcommand{\red}[1]{{\textcolor{red}{[#1]}}}
+\newcommand{\luo}[1]{{\textcolor{blue}{[#1]}}}
+\newcommand{\ke}[1]{{\textcolor{red}{[#1]}}}
+
+
+
+\usepackage{hyperref}
+%在LaTeX(及一系列)中添加带超链接的交叉引用(超链接)
+\hypersetup{
+    colorlinks=true,%彩色链接
+    linkcolor=blue,%内部链接颜色
+    filecolor=magenta,%文件链接颜色
+    urlcolor=cyan,%网页与电子邮件链接颜色
+}
+
+
+
+%%%%%begin{document}
+%%%%%%%%%%%%%%%%
+\title{Note about the video about Christopher Bishop's Model-Based machine learning}
+\author{Zhenxuan Zhang}
+\CTEXoptions[today=old]
+%%%%%%%%%%%%%%%%
+%%%%%begin{document}
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%
+\maketitle
+\section{Problem 1}
+
+  	在视频里，Cristopher提到每一种分类算法在对之前从未观测过的数据进行分析时都有着无明显差异的错判率。机器学习并不是去找去一个单一的适用于所有类型数据的算法，而是去找出针对每一种特定类型数据分析效果最好的算法。
+  	
+  	我很认同他的观点，现实生活中信息无处不在，类型数也数不尽，一种算法也许只适用于数值型数据，而对分类型数据分析效果不好。数值型数据内部还能再根据数据特点分成无数个分支，比如高维的数据和低维的，数据量极大的和数据量较小的等等。没有普适的算法就好比教书时要因材施教，发展农业时要因地制宜。
+  	
+  	而且每个算法都有使用的假设条件，而这些条件限制了它的应用范围，我们必须根据现实数据的特点来进行假设，而不是为了使用该算法而强行对数据进行不合理的假设。
+
+
+\section{Problem 2}
+   PCA作为一个算法，能把高维数据投射为低维数据。
+   PCA作为一个模型，将二维数据投射到三维数据，然后增加一些高斯噪声，重复多次，这样可以假设生成的样本数据不相关，然后反方向在三维空间中的二维平面上根据Bayes定理找出后验分布。通过PCA得到明确的假设条件。
+
+\section{Problem 3}
+   贝叶斯框架易于实现，高效。在文本分类处理中，样本数据是独立同分布这一假设是成立的，此时运用贝叶斯方法分类效果较好。
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
